@@ -35,8 +35,6 @@ class LessThemingPlugin {
       }
     });
 
-    console.log(theme_list);
-
     this.themes = theme_list;
   }
 
