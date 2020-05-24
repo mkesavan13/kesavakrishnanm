@@ -5,4 +5,5 @@ This is a fun project website that tells about myself but is aimed at making my 
 ## How to run the project?
 1. Clone the project
 1. Do `npm install`
-3. Do `npm run start`
+1. Do `npm start`
+1. Visit [`http://localhost:9000`](http://localhost:9000)
