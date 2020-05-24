@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kesava Krishnan</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/compiledThemes/light/main.css">
+	<title>Kesava Krishnan Madavan</title>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/compiledThemes/light/main.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-	<h1>Kesava Krishnan Madavan</h1>
-	<script src="assets/js/app.js"></script>
+	<div class="its_profile_header" id="its_profile_header">
+		<div class="its_profile_image">
+			<img src="assets/images/myimage.jpg">
+		</div>
+		<div class="its_profile_description">
+			<div class="its_profile_name">Kesava Krishnan Madavan</div>
+			<div class="its_subtitle">Member Technical Staff</div>
+			<div class="its_description">Computers, Fitness & Fashion</div>
+		</div>
+	</div>
+	<div class="its_menu">
+		<ul>
+			<li onclick="itsProfile.switchTab(this)" class="selected" data-target="basics">Basics</li>
+			<li onclick="itsProfile.switchTab(this)" data-target="computers">Computers</li>
+			<li onclick="itsProfile.switchTab(this)" data-target="entrepreneurship">Entrepreneurship</li>
+			<li onclick="itsProfile.switchTab(this)" data-target="fitness">Fitness</li>
+			<li onclick="itsProfile.switchTab(this)" data-target="fashion">Fashion</li>
+		</ul>
+	</div>
+	<div class="its_menu_body">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="basics" class="menu_item_body selected">
+					<div class="its_bullet_points">Based out of Chennai, India</div>
+					<div class="its_bullet_points">Went to PET Engineering College, Tirunelveli</div>
+					<div class="its_bullet_points">Working at Zoho Corporation Pvt. Ltd.</div>
+					Fun facts:
+				</div>
+				<div id="computers" class="menu_item_body">
+					<div class="its_bullet_points">Computers</div>
+				</div>
+				<div id="entrepreneurship" class="menu_item_body">
+					<div class="its_bullet_points">entrepreneurship</div>
+				</div>
+				<div id="fitness" class="menu_item_body">
+					<div class="its_bullet_points">fitness</div>
+				</div>
+				<div id="fashion" class="menu_item_body">
+					<div class="its_bullet_points">fashion</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
