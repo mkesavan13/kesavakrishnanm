@@ -1,0 +1,26 @@
+{
+  "name": "kesavakrishnanm",
+  "version": "1.0.0",
+  "description": "This is a fun project created and maintained to be a part of my friend(s)' learning adventure",
+  "main": "index.js",
+  "scripts": {
+    "start":"node_modules/http-server/bin/http-server dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkesavan13/kesavakrishnanm.git"
+  },
+  "keywords": [
+    "mywebsite",
+    "kesavakrishnanm"
+  ],
+  "author": "Kesava Krishnan Madavan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkesavan13/kesavakrishnanm/issues"
+  },
+  "homepage": "https://github.com/mkesavan13/kesavakrishnanm#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
