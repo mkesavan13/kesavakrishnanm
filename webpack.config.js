@@ -47,15 +47,11 @@ module.exports = {
       template: path.join(my_web_config.paths.src,'index.html'),
       filename: 'index.html',
     }),
-    new CopyPlugin({ //Production
+    new CopyPlugin({ //Production //Development watch
       patterns: [
         {
-          from: path.join(my_web_config.paths.src,'assets','js'),
-          to: path.join('assets','js')
-        },
-        {
-          from: path.join(my_web_config.paths.src,'assets','images'),
-          to: path.join('assets','images')
+          from: path.join(my_web_config.paths.src,'assets'),
+          to: path.join('assets')
         }
       ]
     }),
