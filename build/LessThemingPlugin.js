@@ -1,3 +1,23 @@
+/*
+    ****************************************
+    **    Plugin authored by,             **
+    **    Kesava Krishnan Madavan         **
+    **    https://github.com/mkesavan13   **
+    ****************************************
+                                  *
+                                *
+            *                 *      * 
+          *                 *          *
+        *                 *              *
+      *                 *                  *
+        *             *                  *
+          *         *                  *
+            *     *                  *
+                *
+              *
+            *
+*/
+
 const { execSync } = require('child_process');
 const path = require('path');
 
@@ -31,18 +51,28 @@ class LessThemingPlugin {
     theme_list = theme_list.map((theme) => {
       return  {
         src: path.join(config.src,theme,'main.less'),
-        dist: path.join(config.dist,theme,'main.css'),
+        dist: path.join(config.dist,theme,'main.css')
       }
     });
 
     this.themes = theme_list;
+    this.development = config.development ? true : false; //If development config is not present, it is taken as production by default
   }
 
   apply(compiler) {
-    let theme_list = this.themes;
+    let theme_list = this.themes, development = this.development;
     compiler.hooks.done.tap('Compile Themes',(stats) => {
       for(let theme of theme_list){
-        let lessCompile = execSync(`lessc ${theme.src} ${theme.dist}`);
+        let lessCommand = `lessc ${theme.src} ${theme.dist}`;
+        if(development){
+          // Add source map if development server
+          lessCommand += ' --source-map --source-map-include-source';
+        }
+        else{
+          // Compress CSS if production
+          lessCommand += ' -x';
+        }
+        let lessCompile = execSync(lessCommand);
       }
       return true;
     })
